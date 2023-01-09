@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block htmltitle %}
+<title>Lorem ipsum dolor sit amet</title>
+{% endblock %}
+
+{% block announce %}
+{{ super()}}
+<p>这是一个<b>通知！</b></p>
+<br />
+<div>
+  <label for="ul1">活动列表</label>
+  <ul id="ul1">
+    <li>今天是星期一</li>
+    <li>看书</li>
+    <li>做题</li>
+
+  </ul>
+</div>
+<!-- Add announcement here, including arbitrary HTML -->
+{% endblock %}

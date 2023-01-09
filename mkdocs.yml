@@ -1,0 +1,95 @@
+site_name: My Docs
+nav:
+  - 首页:
+    - index: home/home.md
+  - 日志:
+    - 介绍: hugo.md
+    - index: index.md
+
+theme:
+  name: material
+  custom_dir: overrides
+  features:
+    - header.autohide
+    - announce.dismiss
+    - navigation.instant
+    # - toc.integrate
+    - navigation.top
+    - navigation.footer
+    - navigation.tabs
+    - search.highlight
+    - search.suggest
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+      # 文字主色
+      primary: indigo
+      # 链接文字颜色
+      accent: teal
+    
+  language: zh
+
+extra:
+  social:
+    - icon: fontawesome/brands/weibo
+      link: https://twitter.com/squidfunk
+    - icon: fontawesome/brands/qq
+      link: mailto:<19980887@qq.com>
+  consent:
+    title: Cookie consent
+    description: >- 
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+    actions:
+      - accept
+      - reject
+  # analytics: 
+  #   feedback:
+  #     title: Was this page helpful?
+  #     ratings:
+  #       - icon: material/emoticon-happy-outline
+  #         name: This page was helpful
+  #         data: 1
+  #         note: >-
+  #           Thanks for your feedback!
+  #       - icon: material/emoticon-sad-outline
+  #         name: This page could be improved
+  #         data: 0
+  #         note: >- 
+  #           Thanks for your feedback! Help us improve this page by
+  #           using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+
+copyright: >
+  Copyright &copy; 2016 - 2023 Hugo Drive –
+  <a href="#__consent">变更 cookie 设置</a>
+
+plugins:
+  # - privacy:
+  #     external_links_attr_map:
+  #       target: _blank
+  - search:
+      jieba_dict_user: user_dict.txt
+  - social:
+      cards: !ENV [CARDS, true]
+  - tags:
+      enabled: !ENV [CI, false]
+
